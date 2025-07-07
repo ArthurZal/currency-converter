@@ -9,8 +9,7 @@ import java.net.http.HttpResponse;
 public class Converter {
     public Conversion converts(String baseCode, String targetCode, double value) {
         HttpClient client = HttpClient.newHttpClient();
-        var apiKey = "d334330d0665ea2dc66452fc";
-        URI uriDefault = URI.create("https://v6.exchangerate-api.com/v6/" + apiKey +
+        URI uriDefault = URI.create("https://v6.exchangerate-api.com/v6/d334330d0665ea2dc66452fc" +
                 "/pair/" + baseCode + "/" + targetCode + "/" + value);
 
         HttpRequest request = HttpRequest
